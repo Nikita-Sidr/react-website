@@ -11,23 +11,4 @@
   /* grid-gap:10px */
 }
 
-.header{
-  grid-area:h;
-  background-color:rgb(141, 139, 136);
-}
-.header img{
-  width: 50px;
-}
-.nav{
-  grid-area:n;
-  background-color:rgb(27, 27, 38);
-}
-.content img{
-  height: 400px;
-  width: 800px;
-}
-.content{
-  grid-area:c;
-  color: white;
-  background-color:rgb(34, 14, 2);
-}
+
