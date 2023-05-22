@@ -6,6 +6,6 @@
     text-decoration: none;
     color:lightblue;
 }
-.item.active {
+.active {
   color:gold;
 }

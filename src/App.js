@@ -12,7 +12,7 @@ import Settings from "./components/Settings/Settings";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="Global">
+      <div className="Global"> 
         <div className="app-wrapper">
           <Header />
           <Navbar />
