@@ -1,14 +1,10 @@
 .content img {
-  height: 400px;
-  width: 800px;
-}
-
-.content {
-  grid-area: c;
-  color: white;
-  background-color: rgb(34, 14, 2);
-}
-
-.item{
-  color:greenyellow
-}
+    height: 400px;
+    width: 800px;
+  }
+  
+  .content {
+    grid-area: c;
+    color: white;
+    background-color: rgb(34, 14, 2);
+  }
