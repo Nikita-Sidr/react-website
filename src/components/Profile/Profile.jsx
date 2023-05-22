@@ -3,8 +3,8 @@ import s from './Profile.module.css'
 import MyPosts from './MyPosts/MyPosts'
 const Profile = () => {
     return (
-        <div className={s.content}>
-          <img src='https://cdn.wallpapersafari.com/44/54/F4oMUk.jpg' alt=''/>
+        <div >
+          <img className={s.img} src='https://cdn.wallpapersafari.com/44/54/F4oMUk.jpg' alt=''/>
           <div>     
             ava + description     
           </div>

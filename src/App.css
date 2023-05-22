@@ -1,7 +1,7 @@
 .Global{
   background-color: rgb(28, 27, 27);
 }
-.App{
+.app-wrapper{
   width: 1200px;
   margin: 0 auto;
   display:grid;
@@ -12,3 +12,8 @@
 }
 
 
+.app-wrapper-content{
+    grid-area: c;
+    color: white;
+    background-color: rgb(34, 14, 2);
+  }
