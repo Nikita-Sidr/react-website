@@ -6,7 +6,7 @@ let state = {
             { id: 1, message: 'Hello, how is your day? =)', likesCount: 15 },
             { id: 2, message: "It's my second post!", likesCount: 20 },
             { id: 2, message: "Additional test on update with map", likesCount: 1 }],
-        newPostText: 'your text'
+        newPostText: ''
     },
     dialogsPage: {
         dialogsData: [
@@ -32,6 +32,22 @@ let state = {
     },
 }
 
+export let addMessage = () => {
+    let newMessage = {
+        id: state.dialogsPage.dialogsData.length + 1,
+        message: state.dialogsPage.newMessageText
+    }
+    state.dialogsPage.messagesData.push(newMessage)
+    state.dialogsPage.newMessageText=''
+    rerenderEntireTree(state)
+}
+
+export let updateNewMessageText = (newMessage) => {
+    state.dialogsPage.newMessageText = newMessage
+    rerenderEntireTree(state)
+}
+
+
 export let addPost = () => {
     let newPost = {
         id: state.profilePage.postsData.length + 1,
@@ -39,6 +55,7 @@ export let addPost = () => {
         likesCount: 0
     }
     state.profilePage.postsData.push(newPost)
+    state.profilePage.newPostText=''
     rerenderEntireTree(state)
 }
 
