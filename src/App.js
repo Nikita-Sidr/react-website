@@ -8,16 +8,18 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
+
+
+
 const App = (props) => {
   return (
-    <BrowserRouter>
       <div className="Global"> 
         <div className="app-wrapper">
           <Header />
           <Navbar state={props.state.friendsOnlineBar} />
           <div className='app-wrapper-content'>
             <Routes>
-              <Route path="/profile" element={ <Profile state = {props.state.profilePage} />} />
+              <Route path="/profile" element={ <Profile profilePage = {props.state.profilePage} addPost={props.addPost} updateNewPostText={props.updateNewPostText}/>} />
               <Route path="/dialogs/*" element= {<Dialogs state = {props.state.dialogsPage}/>}/>
               <Route path="/news" element={<News />} />
               <Route path="/music" element={<Music />} />
@@ -26,7 +28,6 @@ const App = (props) => {
           </div>
         </div>
       </div>
-    </BrowserRouter>
   )
 }
 export default App

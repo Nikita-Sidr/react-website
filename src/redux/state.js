@@ -1,13 +1,14 @@
+import { rerenderEntireTree } from "../render"
 
 let state = {
-    profilePage:{
+    profilePage: {
         postsData: [
             { id: 1, message: 'Hello, how is your day? =)', likesCount: 15 },
             { id: 2, message: "It's my second post!", likesCount: 20 },
-            { id: 2, message: "Additional test on update with map", likesCount: 1 }
-        ]
+            { id: 2, message: "Additional test on update with map", likesCount: 1 }],
+        newPostText: 'your text'
     },
-    dialogsPage:{
+    dialogsPage: {
         dialogsData: [
             { id: 1, name: 'Nick' },
             { id: 2, name: 'Oleg' },
@@ -22,13 +23,28 @@ let state = {
             { id: 3, message: "What's new on your React website?" }
         ]
     },
-    friendsOnlineBar:{
+    friendsOnlineBar: {
         friendsOnlineData: [
-            {name: 'Rodion'},
-            {name: 'Valera'},
-            {name: 'Oleg'}
+            { name: 'Rodion' },
+            { name: 'Valera' },
+            { name: 'Oleg' }
         ]
     },
+}
+
+export let addPost = () => {
+    let newPost = {
+        id: state.profilePage.postsData.length + 1,
+        message: state.profilePage.newPostText,
+        likesCount: 0
+    }
+    state.profilePage.postsData.push(newPost)
+    rerenderEntireTree(state)
+}
+
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText
+    rerenderEntireTree(state)
 }
 
 export default state

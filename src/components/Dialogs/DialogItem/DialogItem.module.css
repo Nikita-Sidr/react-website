@@ -16,6 +16,6 @@
 
 .item .corner{
     border: 1px solid;
-    margin: 10px auto;
+    margin: 0px 10px 10px 0px;
     display: flex;
 }
