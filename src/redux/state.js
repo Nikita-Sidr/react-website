@@ -21,7 +21,14 @@ let state = {
             { id: 2, message: 'How are you?' },
             { id: 3, message: "What's new on your React website?" }
         ]
-    }
+    },
+    friendsOnlineBar:{
+        friendsOnlineData: [
+            {name: 'Rodion'},
+            {name: 'Valera'},
+            {name: 'Oleg'}
+        ]
+    },
 }
 
 export default state

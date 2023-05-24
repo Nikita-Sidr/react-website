@@ -1,0 +1,21 @@
+.item .active {
+    color:gold;
+    text-decoration: none;
+}
+
+.item .item {
+    color:lightblue;
+    text-decoration: none;
+}
+
+.item img{
+    width: 50px;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.item .corner{
+    border: 1px solid;
+    margin: 10px auto;
+    display: flex;
+}
