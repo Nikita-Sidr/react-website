@@ -1,4 +1,4 @@
-import store from './redux/state';
+import store from './redux/redux-store';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -16,5 +16,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
     )
   reportWebVitals();
 }
-rerenderEntireTree(store._state)
-store.subscribe(rerenderEntireTree)
+rerenderEntireTree(store.getState())
+
+
+store.subscribe( () => {
+  let state = store.getState()
+  rerenderEntireTree(state)
+})
