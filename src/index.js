@@ -5,21 +5,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter} from 'react-router-dom'
-
+import {Provider} from 'react-redux'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
- let rerenderEntireTree = (state) => {
   root.render(
     <BrowserRouter>
-      <App store = {store} state={state}/>
+      <Provider store={store}>
+      <App/>
+      </Provider>
       </BrowserRouter>
     )
   reportWebVitals();
-}
-rerenderEntireTree(store.getState())
-
-
-store.subscribe( () => {
-  let state = store.getState()
-  rerenderEntireTree(state)
-})
