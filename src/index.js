@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
  let rerenderEntireTree = (state) => {
   root.render(
     <BrowserRouter>
-      <App dispatch={store.dispatch.bind(store)} state={state}/>
+      <App store = {store} state={state}/>
       </BrowserRouter>
     )
   reportWebVitals();
