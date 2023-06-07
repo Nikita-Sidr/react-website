@@ -2,3 +2,6 @@
     width: 130px;
     height: 130px;
 }
+.selectedPage{
+    background-color: grey;
+}
