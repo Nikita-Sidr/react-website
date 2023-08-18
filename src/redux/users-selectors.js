@@ -1,4 +1,4 @@
-export const setUsers = (state) => {
+export const getUsers = (state) => {
     return state.usersPage.users
 }
 
@@ -7,7 +7,7 @@ export const getPageSize = (state) => {
 }
 
 export const getTotalUsersCount = (state) => {
-    return state.usersPage.getUsersCount
+    return state.usersPage.totalUsersCount
 }
 
 export const getCurrentPage = (state) => {
