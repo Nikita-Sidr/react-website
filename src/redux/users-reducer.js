@@ -15,7 +15,8 @@ let initialState = {
     totalUsersCount: 10,
     currentPage: 1,
     isFetching: true,
-    followingInProgress: []
+    followingInProgress: [],
+    portionSize: 1,
 }
 
 
